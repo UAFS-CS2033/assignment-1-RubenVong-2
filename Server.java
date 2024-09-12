@@ -30,7 +30,7 @@ public class Server{
         out.printf("Content-Length: 34\n");
         out.printf("Content-Type: text/html\n\n");
 
-        out.printf("<h1>wecome to the web Server</h1>");
+        out.printf("<h1>welcome to the web Server</h1>");
        
         in.close();
         out.close();
