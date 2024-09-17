@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+//import java.net.URL;
 
 public class Server{
     private ServerSocket serverSocket;
@@ -22,16 +23,24 @@ public class Server{
         String buffer = in.readLine();
         while(buffer.length()!=0){
             System.out.println("Client: " + buffer);
-            //out.println("From Server: " + buffer);
             buffer = in.readLine();
         }
+        //URL url = new URL("docroot/home.html");
+        //BufferedReader in = new BufferedReader(new InputStreamReader(null, "docroot/home.html"));
+        
+        /*String buffer = in.readLine();
+        while(buffer != null){
+            System.out.println(buffer);
+            //buffer = in.readLine();
+        }*/
 
         out.printf("HTTP/1.1 200 OK\n");
         out.printf("Content-Length: 34\n");
         out.printf("Content-Type: text/html\n\n");
 
         out.printf("<h1>welcome to the web Server</h1>");
-       
+        //out.printf("<link rel=\"docroot/home.html\"");
+        
         in.close();
         out.close();
     }
