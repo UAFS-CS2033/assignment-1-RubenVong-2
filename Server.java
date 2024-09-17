@@ -41,7 +41,6 @@ public class Server{
             //while ((val = br.readLine()) != null) {
                 //System.out.println(val);
             //}
-            //br.close();
         } else {
             out.printf("<h1>this is not home</h1>");
         }
