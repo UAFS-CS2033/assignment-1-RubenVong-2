@@ -20,9 +20,9 @@ public class Server{
         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         PrintWriter out = new PrintWriter(clientSocket.getOutputStream(),true);
         //*** Application Protocol *****
-        buffer = in.readLine();
+        String buffer = in.readLine();
         while(buffer.length()!=0){
-            System.out.println("Client: " + buffer);
+            System.out.println("Client: " + buffer); //This would return what was from client, including get request
             buffer = in.readLine();
         }
             
